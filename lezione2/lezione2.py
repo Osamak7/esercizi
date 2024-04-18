@@ -132,9 +132,13 @@ print(lista_invitati)
 Print the list to show that its order has changed."""
 
 posti_da_visitare:list=["NY","Tokyo","San Paolo","Montecarlo","Singapore"]
-print("lista disordinata: ",posti_da_visitare)
+print("lista originale : ",posti_da_visitare)
 print("lista ordinata  ma non aggiornata :" ,sorted(posti_da_visitare))
+print("lista originale : ",posti_da_visitare)
+
 print("ordinata in alfabeto inverso : ",sorted(posti_da_visitare, reverse=True))
+print("lista originale : ",posti_da_visitare)
+
 print("far vedere che la lista non è cambiata :",posti_da_visitare)
 posti_da_visitare.reverse()
 print(posti_da_visitare)
@@ -145,9 +149,13 @@ print(posti_da_visitare)
 posti_da_visitare=sorted(posti_da_visitare,reverse=True)
 print(posti_da_visitare)
 
-"""3-9. Dinner Guests: Working with one of the programs from Exercises 3, use len() to print a message indicating the number of people you’re inviting to dinner.
+"""3-9. Dinner Guests: Working with one of the programs from Exercises 3, use len() 
+to print a message indicating the number of people you’re inviting to dinner."""
 
-3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
+print(f"numero di persone invitate a cena : {len(lista_nomi)}")
+
+
+"""3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
 
 6-1. Person: Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.
 6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. Think of five names, and use them as keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
