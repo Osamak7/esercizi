@@ -155,15 +155,57 @@ to print a message indicating the number of people you’re inviting to dinner."
 print(f"numero di persone invitate a cena : {len(lista_nomi)}")
 
 
-"""3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
+"""3-10. Every Function: Think of things you could store in a list. For example, you could make a list of mountains, 
+rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these
+items and then uses each function introduced in this chapter at least once."""
 
-6-1. Person: Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.
-6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. Think of five names, and use them as keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
-6-3. Glossary: A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
+def genera_lista():
+    paesi:list=["Inghilterra","America","Australia","China","Vietnam","Spagna","Canada"]
+    lista_paesi:list=[]
+    i=0
+    while len(lista_paesi)==len(paesi):
+        print(len[i])
+        i+=1
+
+
+
+
+
+"""6-1. Person: Use a dictionary to store information about a person you know.
+Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name,
+age, and city. Print each piece of information stored in your dictionary."""
+person:dict={"Name":"Gigi","Surname":"Rossi","Age":30,"City":"Milano"}
+chiavi=person.keys()
+for key in chiavi:
+    print(f"{key} : {person[key]}")
+
+
+"""6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. Think of five names,
+and use them as keys in your dictionary. Think of a favorite number for each person, and store each 
+as a value in your dictionary. Print each person’s name and their favorite number. For even more fun, 
+poll a few friends and get some actual data for your program."""
+favorite_numbers:dict={"Mario":3,"Luigi":27,"Pietro":"6","Momo":7,"Lollo":9}
+chiavi=favorite_numbers.keys()
+for key in chiavi:
+    print(f"{key} : {favorite_numbers[key]}") 
+
+"""6-3. Glossary: A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
 • Think of five programming words you’ve learned about in the previous chapters. Use these words as the keys in your glossary, and store their meanings as values.
-• Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line. Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+• Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning,
+or print the word on one line and then print its meaning indented on a second line. 
+Use the newline character (\n) to insert a blank line between each word-meaning pair in your output."""
+glossary:dict={"Function":"Sono blocchi di codice riutilizzabili che eseguono un insieme specifico di istruzioni quando vengono chiamati",
+               "Tuple":"sono elementi sequenziali costituiti da una concatenazione di valori di qualsiasi tipo, ognuno memorizzato per posizione",
+               "List":"rappresentano una struttura dati sequenziale che memorizza gli elementi in un determinato ordine, ammette duplicati e permette di modificare gli oggetti che contiene",
+               "dict":"sono un tipo built-in, mutabile e non ordinato che contiene elementi (items) formati da una chiave (key) e un valore (value)",
+               "Print":"permette di scrivere sulla vostra console delle stringhe (sequenze di caratteri)."}
+chiavi=glossary.keys()
+for key in chiavi:
+    print(f"{key} : {glossary[key]}\n") 
+    
 
-6-7. People: Start with the program you wrote for Exercise 6-1. Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
+
+"""6-7. People: Start with the program you wrote for Exercise 6-1. Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
 
 6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as
 you do, print everything you know about each pet. 
