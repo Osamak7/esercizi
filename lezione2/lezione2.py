@@ -218,10 +218,30 @@ for key in chiavi:
     
 
 
-"""6-7. People: Start with the program you wrote for Exercise 6-1. Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
+"""6-7. People: Start with the program you wrote for Exercise 6-1. Make two new dictionaries representing different people,
+and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, 
+print everything you know about each person."""
+
+lista_persone:dict={"Mario":{"Cittadinanza":"Italiano","eta":21,"Altezza":170},
+                    "Luigi":{"Cittadinanza":"Bulgaria","eta":26,"Altezza":160},
+                    "Pietro":{"Cittadinanza":"Italiano","eta":25,"Altezza":173},
+                    "Momo":{"Cittadinanza":"Marocchino","eta":23,"Altezza":180}}
+
+lista_pers2 : dict = {"Piero":{"Cittadinanza":"Italiano","eta":40,"Altezza":179},
+                    "Lucrezia":{"Cittadinanza":"Bulgaria","eta":32,"Altezza":172},
+                    "Lorenzo":{"Cittadinanza":"Italiano","eta":26,"Altezza":175},
+                    "Omar":{"Cittadinanza":"Marocchino","eta":29,"Altezza":183}}
+
+persone : list =[lista_persone,lista_pers2]
+for dizionario in persone:
+    for k,v in dizionario.items():
+        print((f"{k}"))
+        for k1, v1 in v.items():
+            print(f"     {k1},{v1}")
 
 
-6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as
+
+"""6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as
 you do, print everything you know about each pet. 
 
 6-9. Favorite Places: Make a dictionary called favorite_places. Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. Loop through the dictionary, and print each person’s name and their favorite places.
