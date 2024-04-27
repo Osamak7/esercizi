@@ -241,13 +241,96 @@ for dizionario in persone:
 
 
 
-"""6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as
-you do, print everything you know about each pet. 
+"""6-8. Pets: Make several dictionaries, where each dictionary represents a different pet.
+ In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries
+ in a list called pets. Next, loop through your list and as
+you do, print everything you know about each pet. """
 
-6-9. Favorite Places: Make a dictionary called favorite_places. Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. Loop through the dictionary, and print each person’s name and their favorite places.
-6-10. Favorite Numbers: Modify your program from Exercise 6-2 so each person can have more than one favorite number. Then print each person’s name along with their favorite numbers.
-6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary. Create a dictionary of information about each city and include the country that the city is in, its approximate population, and one fact about that city. The keys for each city’s dictionary should be something like country, population, and fact. Print the name of each city and all of the information you have stored about it.
+pets:dict={"cane": {"razza":"alano","nome":"thor"},
+           "gatto":{"razza":"siamese","nome":"loki"}}
 
-6-12. Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output."""
+pets2:dict={"criceto":{"razza":"siberiano","nome":"floky"},
+            "serpente":{"razza":"boa","nome":"jormungard"}}
+
+lista_animali:list=[pets,pets2]
+for dizionario in lista_animali:
+    for chiave,valore in dizionario.items():
+        print(f"{chiave}:")
+        for chiave1,valore1 in valore.items():
+            print(f"     {chiave1}: {valore1}")
+
+"""6-9. Favorite Places: Make a dictionary called favorite_places. 
+Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. 
+To make this exercise a bit more interesting, ask some friends to name a few of their favorite places.
+ Loop through the dictionary, and print each person’s name and their favorite places."""
+
+#create a dictionary with pesron and for each person in the dictionary ask how many favorite seats they have and use this number to 
+# generate a loop with that range and enter the favorite seat for how many numbers in the range
+
+lista_persone: dict ={"Marco":{"numero posti preferiti"  : ""  , "posti preferiti":[]},
+                      "Luigi":{"numero posti preferiti"  : ""  , "posti preferiti":[]},
+                      "Matteo":{"numero posti preferiti" : ""  , "posti preferiti":[]}}
+
+for nome,valori in lista_persone.items():
+   valori["numero posti preferiti"]= int(input(f"{nome} inserisci il numero di posti che vuoi inserire : "))
+
+   for i in range (valori["numero posti preferiti"]) :
+        valori["posti preferiti"].append(input(f"{nome} inserisci il  tuo {i+1} posti preferiti: "))
+ 
+for k,v in lista_persone.items():
+    print(k)
+    for k1,v1 in v.items():
+        print(f"       {k1}  :  {v1} ")
+
+    
 
 
+
+
+"""6-10. Favorite Numbers: Modify your program from Exercise 6-2 so each person can have more than one favorite number. 
+Then print each person’s name along with their favorite numbers."""
+
+favorite_numbers:dict={"Mario":{"favorite numbers":[2,3,4,5]}, 
+                       "Luigi":{"favorite numbers":[4,5,6,7]}, 
+                       "Pietro":{"favorite numbers":[1,2,32]},
+                       "Momo":{"favorite numbers":[7,77,777]}, 
+                       "Lollo":{"favorite numbers":[0,9,8,7]}}
+for k,v in favorite_numbers.items():
+    print(f"{k}")
+    for k1,v1 in v.items():
+        print(f"        {k1} : {v1}")
+
+
+"""6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary.
+ Create a dictionary of information about each city and include the country that the city is in, 
+ its approximate population, and one fact about that city. The keys for each city’s dictionary should be something 
+ like country, population, and fact. Print the name of each city and all of the information you have stored about it."""
+
+cities:dict={"Roma":{"country":"Italy", "population":" 2 754 228 abitanti ","fact":"è il comune più popoloso d'Italia   "},
+            "Casablanca":{"country":"Maroc", "population":"  4 250 050 ","fact":"  Casablanca è la più grande città del Marocco.  "},
+            "Rio de janeiro":{"country":"Brazil", "population":" 6 688 930 ","fact":" È famosa per le sue attrattive turistiche come la spiaggia di copacabana"} } 
+
+for k,v in cities.items():
+    print(f"{k}")
+    for k1,v1 in v.items():
+        print(f"        {k1} : {v1}")
+    
+
+"""6-12. Extensions: We’re now working with examples that are complex enough that they 
+can be extended in any number of ways. Use one of the example programs from this chapter,
+ and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output."""
+
+print("\n")
+
+cities:dict={"Roma":
+            {"continente":"Europa", "country":"Italy","lingua ufficiale":"italiano", "population":" 2 754 228 abitanti ","fact":"è il comune più popoloso d'Italia   "},
+            "Casablanca":
+            {"continente":"Africa", "country":"Maroc","lingua ufficiale":"marocchino", "population":"  4 250 050 ","fact":"  Casablanca è la più grande città del Marocco.  "},
+            "Rio de janeiro":
+            {"contiinente":"America meridionale","country":"Brazil","lingua ufficiale":"portoghese", "population":" 6 688 930 ","fact":" È famosa per le sue attrattive turistiche come la spiaggia di copacabana"} } 
+
+for k,v in cities.items():
+    print(f"{k}:")
+    for k1,v1 in v.items():
+        print(f"        {k1} : {v1}")
+    print("\n")
