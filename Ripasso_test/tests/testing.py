@@ -8,3 +8,6 @@ class TestCalculations(unittest.TestCase):
     
     def test_get_sum(self):
         self.assertEqual(self.calcolo.get_sum(), 8 , "Il calcolo e sbagliato")
+
+if __name__ == "__main__":
+    unittest.main()
