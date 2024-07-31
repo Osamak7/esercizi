@@ -13,6 +13,7 @@ with open("esempio.py",mode="r") as reader: # aperto il lettura e stampo il cont
 
     contenuto = reader.read()
     print(contenuto)
+    
 
 
 

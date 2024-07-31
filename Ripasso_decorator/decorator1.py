@@ -7,7 +7,6 @@ class Analisi:
     def tempo(func):
         
         def wrapper(*args):
-            import time
             
             start = time.time()
             time.sleep(1)

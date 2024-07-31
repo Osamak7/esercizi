@@ -1,0 +1,36 @@
+
+Esercizio 1: Ereditarietà tra Classi
+Crea una gerarchia di classi per rappresentare animali.
+ Includi una classe base Animale e due classi derivate Cane e Gatto. 
+ Implementa un metodo fa_suono() per ogni classe che restituisca il suono fatto dall'animale.
+
+Esercizio 2: Decorator
+Crea un decorator chiamato tempo_di_esecuzione che
+ misuri e stampi il tempo di esecuzione di una funzione.
+
+Esercizio 3: Context Manager
+Crea un context manager chiamato tempo_esecuzione 
+che misuri e stampi il tempo di esecuzione di un
+ blocco di codice.
+
+Esercizio 4: Unit Test
+Scrivi unit test per le classi Cane e Gatto dell'esercizio 1 usando il modulo unittest.
+
+Esercizio 5: Context Manager con File
+Crea un context manager che apra e chiuda un file. Implementa l'operazione di lettura e scrittura all'interno del context manager.
+
+Esercizio 6: Decorator con Parametri
+Crea un decorator che accetti parametri, ad esempio un decorator che logga messaggi con un livello di log specificato (info, warning, error).
+
+Esercizio 7: Ereditarietà e Polimorfismo
+Aggiungi un metodo descrizione() alla classe Animale che descriva l'animale. Sovrascrivi questo metodo nelle classi Cane e Gatto per fornire descrizioni specifiche.
+
+Esercizio 8: Unit Test con Mock
+Scrivi un test che utilizzi il modulo unittest.mock per simulare il comportamento di una dipendenza esterna in una delle tue classi.
+
+Esercizio 9: Decorator per Validazione
+Crea un decorator che validi gli argomenti di una funzione, ad esempio verificando che siano numeri positivi.
+
+Esercizio 10: Context Manager per Transazioni
+Crea un context manager che simuli una transazione bancaria. Implementa le operazioni di deposito e prelievo all'interno del context manager e annulla le operazioni se c'è un'eccezione.
+
