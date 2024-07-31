@@ -86,24 +86,66 @@ print(remuv_num_in_dict_for_list({1:2,2:1,3:2},[1,1,1,2,2,3]))
 print("*"*30)
 
 """9. Scrivi una funzione che converta una lista di tuple (chiave, valore) in un dizionario. Se la chiave è già presente, aggiungi il valore alla lista di valori già associata alla chiave."""
- 
+def tuple_to_dict(tupla1:tuple,tupla2:tuple):
+        dizionario:dict={}
+        collection_keys:list=[]
+        collezione_indici_copie:list=[]
+        indice:int=0
+
+        for chiave in tupla1:
+
+            if chiave not in collection_keys:
+                collection_keys.append(chiave)
+                dizionario.update({chiave:list()})
+                dizionario[chiave].append(tupla2[indice])
+
+            else :
+                collezione_indici_copie.append(indice)
+                dizionario[chiave].append(tupla2[indice])
+
+            indice+=1
+
+        return dizionario
+
+
+print(tuple_to_dict((1,2,3,4,1,2),("ciao","miao","bau","muu","zoo","floor")))
+print("*"*30)
+
 """10. Scrivi una funzione che prende una lista di numeri e ritorna un dizionario che classifica i numeri in liste separate per numeri pari e dispari."""
+def es10(num_list:list[int]):
+    dizionario_pd:dict[str:list[int]]={"pari": [],"dispari":[]}
+    for num in num_list:
+        if num %2==0:
+            dizionario_pd["pari"].append(num)
+        else:
+            dizionario_pd["dispari"].append(num)
+    return dizionario_pd
+
+
+print(es10((1,2,3,4,5,6,7,8,9)))
+print("*"*30)
+
  
-"""11. Scrivi una funzione che converte una temperatura da gradi Celsius a Fahrenheit e viceversa a seconda del parametro. Utilizza il concetto di parametri opzionali.
+"""11. Scrivi una funzione che converte una temperatura da gradi Celsius a Fahrenheit e viceversa a seconda del parametro. Utilizza il concetto di parametri opzionali."""
+def es11(gradi):
+    pass
+
+print("*"*30)
+
  
-12. Scrivi una funzione che somma tutti i numeri interi di una lista che sono maggiori di un dato valore intero definito threshold.
+"""12. Scrivi una funzione che somma tutti i numeri interi di una lista che sono maggiori di un dato valore intero definito threshold."""
  
-13. Scrivi una funzione che, data una lista, ritorni un dictionary che mappa ogni elemento alla sua frequenza nella lista.
+"""13. Scrivi una funzione che, data una lista, ritorni un dictionary che mappa ogni elemento alla sua frequenza nella lista."""
  
-14. Scrivi una funzione che ritorna un dizionario che unisce due dizionari. Se una chiave è presente in entrambi, somma i loro valori nel nuovo dizionario.
+"""14. Scrivi una funzione che ritorna un dizionario che unisce due dizionari. Se una chiave è presente in entrambi, somma i loro valori nel nuovo dizionario."""
  
-15. Scrivi una funzione che, dato un insieme e una lista di numeri interi da rimuovere, ritorni un nuovo insieme senza i numeri specificati nella lista.
+"""15. Scrivi una funzione che, dato un insieme e una lista di numeri interi da rimuovere, ritorni un nuovo insieme senza i numeri specificati nella lista."""
  
-16. Scrivi una funzione che ritorna il valore massimo, minimo e la media di una lista di numeri interi.
+"""16. Scrivi una funzione che ritorna il valore massimo, minimo e la media di una lista di numeri interi."""
  
-17. Scrivi una funzione che calcola la media di una lista di numeri e ritorna il valore arrotondato all'intero più vicino.
+"""17. Scrivi una funzione che calcola la media di una lista di numeri e ritorna il valore arrotondato all'intero più vicino."""
  
-18. Scrivi una funzione che rimuove tutti i duplicati da una lista, contenente sia numeri che lettere, mantenendo l'ordine originale degli elementi.
+"""18. Scrivi una funzione che rimuove tutti i duplicati da una lista, contenente sia numeri che lettere, mantenendo l'ordine originale degli elementi.
  
 19. Scrivi una funzione che ruota gli elementi di una lista verso sinistra di un numero specificato k di posizioni. La rotazione verso sinistra significa che ciascun elemento della lista viene spostato a sinistra di una posizione e l'elemento iniziale viene spostato alla fine della lista. Per la rotazione utilizzare lo slicing e gestire il caso in cui il numero specificato di posizioni sia maggiore della lunghezza della lista.
  
